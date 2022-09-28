@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <style>
+      #container {
+        display: flex;
+        flex-direction: column;
+      }
+      .mainRow {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        border: 1px solid blue;
+      }
+      #carazol {
+        margin: auto;
+        width: 90%;
+        height: 75vh;
+        border-radius: 20px;
+        border: 1px solid red;
+      }
+      #carazol > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+      #carazol > .btn {
+        text-align: center;
+        font-weight: bolder;
+        height: 50px;
+        width: 30px;
+      }
+      #next {
+        position: absolute;
+        top: 250px;
+        right: 55px;
+      }
+      #prev {
+        position: absolute;
+        top: 250px;
+        left: 55px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <ul>
+        <li>
+          <img
+            src="https://image.pitchbook.com/6jaFMbZG6gBvnwlKCqOOzPxjnN21625577561003_200x200"
+            alt=""
+          />
+        </li>
+        <li id="Scity">Select City</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="search" id="search" placeholder="Search for Products" />
+        </li>
+      </ul>
+      <ul>
+        <li id="cartlogo">
+          <img
+            src="https://mpng.subpng.com/20190404/ojo/kisspng-computer-icons-portable-network-graphics-scalable-shopping-cart-svg-png-icon-free-download-19-184-5ca6a1e6ab9a82.8989698815544242947029.jpg"
+            alt=""
+          /><span>Cart</span>
+        </li>
+        <li><button id="lgsp">LOGIN/SIGNUP</button></li>
+      </ul>
+    </div>
+    <div id="showCity"></div>
+    <div id="showSearchItem"></div>
+    <div id="container">
+      <div class="mainRow" id="1strow">
+        <div id="carazol">
+          <img id="image" alt="" />
+          <button class="btn" id="next">></button>
+          <button class="btn" id="prev"><</button>
+        </div>
+        <div id="category">
+          <ul>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div>
+                  <img src="" alt="" />
+                  <h3></h3>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mainRow" id="2ndrow"></div>
+      <div class="mainRow" id="3rdrow"></div>
+      <div class="mainRow" id="4throw"></div>
+    </div>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>
+<script>
+  let imgdata1 = [
+    { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
+    { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
+    { url: "https://s.rmjo.in/AirOKWeb%20(1).png" },
+    { url: "https://s.rmjo.in/WP-Web.png" },
+  ];
+  let cont = document.getElementById("image");
+  cont.src = imgdata1[0].url;
+
+  let count = 1;
+  let id;
+  let func = (count) => {
+    id = setInterval(() => {
+      cont.src = imgdata1[count].url;
+      if (count === imgdata1.length - 1) {
+        count = 0;
+      } else {
+        count++;
+      }
+      console.log(count);
+    }, 3000);
+  };
+  func(count);
+
+  let nextimg = () => {
+    clearInterval(id);
+    cont.src = imgdata1[count].url;
+    // console.log(imgdata1.length);
+    // console.log(count);
+    if (count === imgdata1.length - 1) {
+      count = 0;
+    } else {
+      count++;
+    }
+    func(count);
+  };
+  let previmg = () => {
+    clearInterval(id);
+    cont.src = imgdata1[count].url;
+    if (count === 0) {
+      count = imgdata1.length - 1;
+    } else {
+      count--;
+    }
+    func(count);
+  };
+
+  document.getElementById("next").addEventListener("click", nextimg);
+  document.getElementById("prev").addEventListener("click", previmg);
+</script>
