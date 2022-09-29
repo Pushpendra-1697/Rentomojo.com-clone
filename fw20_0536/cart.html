@@ -48,15 +48,19 @@
             width: 100%;
         }
 
-        #bill,#total_quantity {
+        #bill,
+        #total_quantity {
             display: block;
+            color: green;
+        }
+        #total_quantity{
+            color: goldenrod;
         }
     </style>
 </head>
 
 <body>
     <div id="nav_container"></div>
-
 
     <div id="container"></div>
     <a href="checkout.html"><button id="checkout">Checkout</button></a>
@@ -104,7 +108,7 @@
         };
         total_price.innerText = total;
         total_quantity.innerText = quentity;
-        
+
         localStorage.setItem("total", JSON.stringify(obj));
     };
     render(data);
@@ -115,6 +119,4 @@
         //   localStorage.setItem("cart",JSON.stringify(data));
     };
 
-  //localstorage data;
-  //append local storage data in container id;
 </script>

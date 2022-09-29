@@ -1,64 +1,80 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-  }
-  div{
-    display: block;
-  }
-  
-  #navbar {
-    height: 50px;
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background: #fff;
-    box-shadow: 0 0 0;
-    height: 62px;
-    width: 100%;
-    z-index: 7;
-    top: 0;
-    padding: 40px;
-    position: fixed;
-    top: 0.1px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  ul {
-    width: 30%;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-around;
-    /* border: 1px solid blue; */
-  }
-  li{
-    list-style: none; 
-  }
-  li>img{
-    height:150px;
-  }
-  #search{
-    width: 350px;
-    height: 50px;
-    border-radius: 5px;
-    border: 0.5px solid gray;
-    padding: 10px;
-  }
-  #cartlogo{
-    display: flex;
-    align-items: center;
-  }
-  #cartlogo>img{
-    width: 30px;
-    height: 30px;
-  }
-  #bill,#total_quantity{
-    display: none;
-  }
- 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+div {
+  display: block;
+}
+
+#navbar {
+  height: 50px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  box-shadow: 0 0 0;
+  height: 62px;
+  width: 100%;
+  z-index: 7;
+  top: 0;
+  padding: 40px;
+  position: fixed;
+  top: 0.1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+ul {
+  width: 30%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid blue; */
+}
+
+li {
+  list-style: none;
+}
+
+li>img {
+  height: 150px;
+}
+
+#search {
+  width: 350px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.5px solid gray;
+  padding: 10px;
+}
+
+#cartlogo {
+  display: flex;
+  align-items: center;
+}
+
+#cartlogo>img {
+  width: 30px;
+  height: 30px;
+}
+
+#bill,
+#total_quantity {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+#total_quantity,#total_price{
+  color: goldenrod;
+}
