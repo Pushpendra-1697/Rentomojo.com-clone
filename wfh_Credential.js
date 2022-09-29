@@ -16,6 +16,7 @@ let append=()=>{
         p.innerText=el.price;
         let btn=document.createElement('button')
         btn.innerText='Add to Cart'
+        btn.className='button'
         btn.addEventListener('click',()=>{
             addTocart()
         })
