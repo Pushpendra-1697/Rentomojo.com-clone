@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
+    <title>Home/Landing Page</title>
     <link rel="stylesheet" href="./style/navbar.css" />
     <style>
       #container {
         margin-top: 10px;
         display: flex;
         flex-direction: column;
+
         /* gap: 10px; */
         background-color: #fff;
+
+        margin: 10% 0;
+
       }
       .mainRow {
         width: 100%;
@@ -247,12 +251,71 @@
       <div class="mainRow" id="3rdrow"></div>
       <div class="mainRow" id="4throw"></div>
     </div>
+    
   </body>
 </html>
 <script src="./scripts/index.js"></script>
 <script type="module" src="./scripts/index_carzol.js"></script>
 <script type="module">
+
+
+   
+
   import nvbr from './components/nvbr.js';
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
+  import auth from './components/auth.js';
+    auth();
+
+    
+  let imgdata1 = [
+    { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
+    { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
+    { url: "https://s.rmjo.in/AirOKWeb%20(1).png" },
+    { url: "https://s.rmjo.in/WP-Web.png" },
+  ];
+  let cont = document.getElementById("image");
+  cont.src = imgdata1[0].url;
+
+  let count = 1;
+  let id;
+  let func = (count) => {
+    id = setInterval(() => {
+      cont.src = imgdata1[count].url;
+      if (count === imgdata1.length - 1) {
+        count = 0;
+      } else {
+        count++;
+      }
+      console.log(count);
+    }, 3000);
+  };
+  func(count);
+
+  let nextimg = () => {
+    clearInterval(id);
+    cont.src = imgdata1[count].url;
+    // console.log(imgdata1.length);
+    // console.log(count);
+    if (count === imgdata1.length - 1) {
+      count = 0;
+    } else {
+      count++;
+    }
+    func(count);
+  };
+  let previmg = () => {
+    clearInterval(id);
+    cont.src = imgdata1[count].url;
+    if (count === 0) {
+      count = imgdata1.length - 1;
+    } else {
+      count--;
+    }
+    func(count);
+  };
+
+  document.getElementById("next").addEventListener("click", nextimg);
+  document.getElementById("prev").addEventListener("click", previmg);
+
 </script>
