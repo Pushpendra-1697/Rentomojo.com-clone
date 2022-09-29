@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
+    <title>Home/Landing Page</title>
     <link rel="stylesheet" href="./style/navbar.css" />
     <style>
       #container {
         display: flex;
         flex-direction: column;
+        margin: 10% 0;
       }
       .mainRow {
         width: 100%;
@@ -118,14 +119,23 @@
       <div class="mainRow" id="3rdrow"></div>
       <div class="mainRow" id="4throw"></div>
     </div>
+    
   </body>
 </html>
 <script src="./scripts/index.js"></script>
 <script type="module">
+
+
+   
+
   import nvbr from './components/nvbr.js';
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
 
+  import auth from './components/auth.js';
+    auth();
+
+    
   let imgdata1 = [
     { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
     { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
