@@ -1,11 +1,11 @@
-function nvbr () {
-    return `<div id="navbar">
+function nvbr() {
+  return `<div id="navbar">
     <ul>
       <li>
-        <img
-          src="https://image.pitchbook.com/6jaFMbZG6gBvnwlKCqOOzPxjnN21625577561003_200x200"
-          alt=""
-        />
+      <a href="./index.html"><img
+      src="https://image.pitchbook.com/6jaFMbZG6gBvnwlKCqOOzPxjnN21625577561003_200x200"
+      alt="rento mojo logo"
+      /></a>
       </li>
       <li id="Scity">Select City</li>
     </ul>
@@ -16,12 +16,20 @@ function nvbr () {
     </ul>
     <ul>
       <li id="cartlogo">
+      <span id="total_quantity"> 0 </span>
         <img
           src="https://mpng.subpng.com/20190404/ojo/kisspng-computer-icons-portable-network-graphics-scalable-shopping-cart-svg-png-icon-free-download-19-184-5ca6a1e6ab9a82.8989698815544242947029.jpg"
           alt=""
-        /><span>Cart</span>
+        />
+        <a href="./cart.html"><span>Cart</span></a>
+        <p id="bill">Total Bill :- <span id="total_price">0</span></p>
       </li>
-      <li><button id="lgsp">LOGIN/SIGNUP</button></li>
+
+      <div id="nav" class="access-btn">
+       <span><a id="log" href="./login.html">LOGIN</a></span>
+       <div id="logout"><p>Logout</p></div>
+       <span><a href="signup.html" id="join">SIGNUP</a></span>
+      </div>
     </ul>
   </div>`
 }

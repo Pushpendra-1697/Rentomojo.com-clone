@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./style/navbar.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+                "Lucida Sans", Arial, sans-serif;
+        }
+
+        #checkout {
+            margin: 4%;
+            font-size: 23px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #container button,
+        #container h1,
+        #container p {
+            padding: 10px;
+            margin-bottom: 2%;
+            border-radius: 10px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+            margin-top: 7%;
+        }
+
+        #container>div {
+            background-color: aliceblue;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #container img {
+            width: 100%;
+        }
+
+        #bill,#total_quantity {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav_container"></div>
+
+
+    <div id="container"></div>
+    <a href="checkout.html"><button id="checkout">Checkout</button></a>
+</body>
+
+</html>
+<script type="module">
+    import nvbr from './components/nvbr.js';
+    document.querySelector("#nav_container").innerHTML = nvbr();
+
+    import { data } from './components/data.js';
+    // let data = JSON.parse(localStorage.getItem("cart"))||[];
+    console.log(data);
+
+    let container = document.querySelector('#container');
+    let total_price = document.querySelector("#total_price");
+    let total_quantity = document.querySelector('#total_quantity');
+
+    let render = (data) => {
+        let quentity = 0;
+        let total = 0;
+        container.innerHTML = null;
+        data.forEach(({ imageUrl, title, Price }, index) => {
+            total += Number(Price);
+            quentity++;
+            let div = document.createElement("div");
+            let i = document.createElement("img");
+            i.src = imageUrl;
+            let t = document.createElement("p");
+            t.innerText = title;
+            let p = document.createElement("h1");
+            p.innerText = Price;
+            let removeBtn = document.createElement("button");
+            removeBtn.innerText = "Delete";
+            removeBtn.style.color = 'red';
+            removeBtn.onclick = () => {
+                removefunc(index);
+            }
+            div.append(i, t, p, removeBtn);
+            container.append(div);
+        });
+        let obj = {
+            "price": total,
+            "quentity": quentity,
+        };
+        total_price.innerText = total;
+        total_quantity.innerText = quentity;
+        
+        localStorage.setItem("total", JSON.stringify(obj));
+    };
+    render(data);
+
+    let removefunc = (index) => {
+        data.splice(index, 1);
+        render(data);
+        //   localStorage.setItem("cart",JSON.stringify(data));
+    };
+
+  //localstorage data;
+  //append local storage data in container id;
+</script>

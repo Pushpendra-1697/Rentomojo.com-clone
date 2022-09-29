@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      #master {
+        margin: auto;
+        width: 100vw;
+        height: 750px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 200%;
+        margin-left: -100%;
+      }
+      .box {
+        transition-duration: 2s;
+        transform: translateX(50%);
+      }
+      #b1,
+      #b2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 30%;
+        border-radius: 30px;
+        text-align: center;
+      }
+      #b2 {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 1% 1%;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 20px 10px;
+        margin: 10px 0;
+        border-radius: 3px;
+        border: none;
+        background-color: rgb(236, 236, 236);
+        box-sizing: border-box;
+      }
+      form {
+        border-radius: 30px;
+      }
+      input:focus {
+        outline: none;
+        border: 2px solid;
+        border-color: #25d298;
+      }
+      button {
+        background-color: #25d298;
+        border-radius: 30px;
+      }
+      #b1 > img {
+        width: 50%;
+      }
+      @media all and (min-width: 768px) and (max-width: 1024px) {
+        #b1,
+        #b2 {
+          padding: 3%;
+        }
+      }
+      @media all and (min-width: 320px) and (max-width: 767px) {
+        #b1,
+        #b2 {
+          padding: 4%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="master">
+      <div id="main">
+        <div id="b1">
+          <img id="ss-img" alt="" />
+          <h1>Congratulations!</h1>
+          <h1>You are now a Premium Member</h1>
+        </div>
+        <div id="b2">
+          <div>
+            <h1>Amount to be paid: ₹<span id="total_price">0</span></h1>
+            <form action="" id="payment">
+              <input id="card_number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
+              <input type="date" id="expiry" placeholder="Expiry" />
+              <input type="text" id="holder" placeholder="Card Holder Name" />
+              <input
+                type="password"
+                maxlength="3"
+                minlength="3"
+                placeholder="CVV"
+              />
+              <button type="submit" id="checkout">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let total = JSON.parse(localStorage.getItem("total"));
+  let total_price = document.querySelector("#total_price");
+  total_price.innerHTML = total.price;
+
+  let img = document.createElement("img");
+  img.src = "";
+  let success_img = document.getElementById("ss-img");
+  let submit = document.getElementById("checkout");
+  let main = document.getElementById("main");
+  let user = JSON.parse(localStorage.getItem("loggedin"));
+  let payment = document.getElementById("payment");
+  user.pm = true;
+  console.log(user);
+  localStorage.setItem("loggedin", JSON.stringify(user));
+  submit.addEventListener("click", (event) => {
+    event.preventDefault();
+    success_img.src =
+      "https://cdn.dribbble.com/users/159981/screenshots/2112264/media/40b1edcc8d8e168d6e32f3976318747f.gif";
+    main.classList.add("box");
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 4000);
+  });
+
+</script>
