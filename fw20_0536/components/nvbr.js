@@ -1,12 +1,18 @@
 function nvbr() {
   return `<div id="navbar">
     <ul>
+    <li>
+    <a href="./index.html">
+      <img src="https://image.pitchbook.com/6jaFMbZG6gBvnwlKCqOOzPxjnN21625577561003_200x200" alt=""/>
+    </a>
+    </li>
       <li>
       <a href="./index.html"><img
       src="https://image.pitchbook.com/6jaFMbZG6gBvnwlKCqOOzPxjnN21625577561003_200x200"
       alt="rento mojo logo"
       /></a>
       </li>
+
       <li id="Scity">Select City</li>
     </ul>
     <ul>
@@ -25,6 +31,8 @@ function nvbr() {
         <p id="bill">Total Bill :- <span id="total_price">0</span></p>
       </li>
 
+      <li><a href="../login.html"><button id="lgsp">LOGIN/SIGNUP</button></a></li>
+
       <div id="nav" class="access-btn">
        <span><a id="log" href="./login.html">LOGIN</a></span>
        <div id="logout"><p>Logout</p></div>
@@ -34,3 +42,5 @@ function nvbr() {
   </div>`
 }
 export default nvbr;
+
+/* <li><button id="lgsp">LOGIN/SIGNUP</button></li> */

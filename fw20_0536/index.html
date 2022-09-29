@@ -8,24 +8,28 @@
     <link rel="stylesheet" href="./style/navbar.css" />
     <style>
       #container {
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
+
+        /* gap: 10px; */
+        background-color: #fff;
+
         margin: 10% 0;
+
       }
       .mainRow {
         width: 100%;
-        height: 150vh;
+        height: 100vh;
+       margin-top: 60px;
         display: flex;
         flex-direction: column;
-        /* gap: 10px; */
-        border: 1px solid blue;
       }
       #carazol {
         margin: auto;
+        margin-top: 15px;
         width: 90%;
-        /* height: 75vh; */
         border-radius: 20px;
-        border: 1px solid red;
       }
       #carazol > img {
         width: 100%;
@@ -48,74 +52,202 @@
         top: 250px;
         left: 55px;
       }
+      #category{
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 90%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+      }
+      .category{
+        width: 130px;
+        height: 80px;
+        border-radius: 10px;
+        background-color: #fff;
+        /*  */
+        border: 0.1px solid gray;
+      
+      }
+      .category:hover{
+        cursor: pointer;
+        border:0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .category>a>h3{
+        text-align: center;
+        font-size: small;
+        font-weight: lighter;
+      }
+      .category>a>img{
+        width: 100%;
+        border-radius: 10px 10px ;
+        height: 70%;
+      }
+      a{
+        color:black;
+        text-decoration: none;
+      }
+
+      #Sndrow{
+        /* margin-top: 10px; */
+        background-color: rgb(245,247,250);
+      }
+     #charSrow{
+      display: flex;
+      padding: 0px 50px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid red;
+     }
+     #Btn2{
+      width: 110px;
+      height: 50px;
+      border: 1px solid sienna;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+     #Btn2>button{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: black;
+      border: 0.5px solid black;
+     }
+     #appedndCategory{
+      display: flex;
+      gap: 50px;
+      overflow-x: scroll;
+      background-color: rgb(245,247,250);
+      border: 1px solid blueviolet;
+     }
+     .card{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /* height: auto; */
+      border: 1px solid black;
+     }
+     .card>img{
+      width: 250px;
+      height: 80%;
+     }
+     /* .card>button{
+      height: 25px;
+      position: relative;
+      left: 140px;
+      bottom:20px
+     } */
+     .pBtn{
+      padding: 0px 10px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+     }
+     .pBtn>button{
+      width: 100px;
+      height: 30px;
+      color: red;
+      background-color: #fff;
+      border: 0.5px solid red;
+      border-radius: 2px;
+     }
+     .pBtn>button:hover{
+      color: #fff;
+      background-color: red;
+      border: 0px;
+      border-radius: 2px;
+     }
+     #rent{
+      font-size: small;
+      color: lightgray;
+      font-weight: 100;
+     }
+    
+     #Sline>h1>span{
+      font-size: 30px;
+      font-weight: lighter;
+      color: gray;
+     }
     </style>
   </head>
   <body>
     <div id="nav_container"></div>
-
     <div id="showCity"></div>
     <div id="showSearchItem"></div>
     <div id="container">
-      <div class="mainRow" id="1strow">
+      <div class="mainRow" id="Fstrow">
         <div id="carazol">
           <img id="image" alt="" />
           <button class="btn" id="next">></button>
           <button class="btn" id="prev"><</button>
         </div>
         <div id="category">
-          <ul>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <div>
-                  <img src="" alt="" />
-                  <h3></h3>
-                </div>
-              </a>
-            </li>
-          </ul>
+         <div class="category">
+          <a href="">
+            <img src="https://www.kindpng.com/picc/m/601-6018149_icon-product-sending-package-icon-hd-png-download.png" alt="">
+            <h3>Packages</h3>
+          </a>
+         </div>
+         <div class="category">
+          <a href="">
+          <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="">
+          <h3>Furniture</h3>
+          </a>
+          
+         </div>
+         <div class="category">
+          <a href="">
+            <img src="https://img.freepik.com/premium-vector/washing-machine-icon-vector-graphics_292645-278.jpg?w=2000" alt="">
+          <h3>Appliances</h3>
+          </a>
+          
+         </div>
+         <div class="category">
+          <a href="">
+            <img src="https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2642-thumb.png" alt="">
+          <h3>Electronics</h3>
+          </a>
+         </div>
+         <div class="category">
+          <a href="../fitness.html">
+            <img src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-vector-cycling-machine-icon-png-image_872127.jpg" alt="">
+          <h3>Fitness</h3>
+          </a>
+          
+         </div>
+         <div class="category">
+          <a href="../wfh_Credential.html">
+            <img src="https://png.pngtree.com/png-vector/20190326/ourlarge/pngtree-vector-office-table-icon-png-image_865258.jpg" alt="">
+          <h3>WFH Essentials</h3>
+          </a>
+          
+         </div>
         </div>
       </div>
-      <div class="mainRow" id="2ndrow"></div>
+      <div class="mainRow" id="Sndrow">
+        <div id="charSrow">
+          <div id="Sline">
+            <h1>You'll love to  <br><span>
+              take these home
+            </span></h1>
+          </div>
+          <hr>
+          <div id="Btn2">
+            <button id="nextdiv">></button>
+            <button id="prewdiv"><</button>
+          </div>
+        </div>
+        <div id="appedndCategory">
+        </div>
+      </div>
       <div class="mainRow" id="3rdrow"></div>
       <div class="mainRow" id="4throw"></div>
     </div>
@@ -123,6 +255,7 @@
   </body>
 </html>
 <script src="./scripts/index.js"></script>
+<script type="module" src="./scripts/index_carzol.js"></script>
 <script type="module">
 
 
@@ -131,7 +264,6 @@
   import nvbr from './components/nvbr.js';
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
-
   import auth from './components/auth.js';
     auth();
 
@@ -185,4 +317,5 @@
 
   document.getElementById("next").addEventListener("click", nextimg);
   document.getElementById("prev").addEventListener("click", previmg);
+
 </script>

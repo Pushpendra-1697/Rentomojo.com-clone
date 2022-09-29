@@ -169,5 +169,15 @@ let data=[
         title:"Lenovo IdeaPad S340, Intel Core i3 processor, 10th Gen - (8GB / 1TB HDD / Win 10 Home, 14 inch, Platinum Grey)",
         Price:"1099",
     }
-];
-export {data};
+
+]
+
+let imgdata1 = [
+    { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
+    { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
+    { url: "https://s.rmjo.in/AirOKWeb%20(1).png" },
+    { url: "https://s.rmjo.in/WP-Web.png" },
+  ];
+
+export {data,imgdata1}
+
