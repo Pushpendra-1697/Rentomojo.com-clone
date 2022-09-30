@@ -32,5 +32,6 @@ let append=()=>{
 append();
 let addTocart = (el) => {
     cart_data.push(el);
+    alert(`Product Added Successfully`);
     localStorage.setItem('cart',JSON.stringify(cart_data));
 };
