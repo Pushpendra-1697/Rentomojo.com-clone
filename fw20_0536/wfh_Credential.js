@@ -17,7 +17,7 @@ let append=()=>{
         let h3=document.createElement('p')
         h3.innerText=el.name;
         let p=document.createElement('p')
-        p.innerText=el.price;
+        p.innerText=`₹ ${el.price} /mo`;
         let btn=document.createElement('button')
         btn.innerText='Add to Cart'
         btn.className='button'

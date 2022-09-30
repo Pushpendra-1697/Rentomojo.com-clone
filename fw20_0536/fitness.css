@@ -24,11 +24,14 @@
     margin: auto;
 }
 #main{
+    position: relative;
+    top: 80px;
     display: flex;
     gap:40px;
     margin: 40px 0px;
     margin-left: 10%;
     margin-left: 10%;
+    margin-bottom: 100px;
 }
 #sidebar{
     width: 20%;
@@ -49,3 +52,14 @@
    height: 70%;
    padding: auto;
 }
+#container>div>p{
+    height: 30px;
+}
+.button{
+    margin-top: 10px;
+}
+.button:hover{
+    background-color: red;
+    color: black;
+    
+    }

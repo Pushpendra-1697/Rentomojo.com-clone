@@ -8,7 +8,6 @@ import { fitness } from "./fitness_data.js";
 
 let cart_data = JSON.parse(localStorage.getItem("cart"))||[];
 let append=()=>{
-    console.log(fitness);
 
     let main=document.getElementById('container')
     main.innerHTML=null;
@@ -19,9 +18,10 @@ let append=()=>{
         let h3=document.createElement('p')
         h3.innerText=el.name;
         let p=document.createElement('p')
-        p.innerText=el.price;
+        p.innerText=`₹ ${el.price} /mo`;
         let btn=document.createElement('button')
         btn.innerText='Add to Cart'
+        btn.className='button'
         btn.addEventListener('click',()=>{
             addTocart(el);
         })
@@ -37,3 +37,10 @@ let addTocart = (el) => {
     localStorage.setItem('cart',JSON.stringify(cart_data));
 };
 
+// let filter1 = () =>{
+//     let value=document.querySelectorAll("input[type='checkbox']")
+//     value.addEventListener('click',()=>{
+//         console.log(value);
+//     })
+    
+// }
