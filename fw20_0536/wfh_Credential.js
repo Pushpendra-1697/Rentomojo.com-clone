@@ -1,17 +1,16 @@
+import { wfh } from "./credential.js";
 
+import nvbr from './components/nvbr.js';
+    document.querySelector("#nav_container").innerHTML = nvbr();
 
-    
-
-
-import { fitness } from "./fitness_data.js";
-
+let cart_data = JSON.parse(localStorage.getItem("cart"))||[];
 
 let append=()=>{
-    console.log(fitness);
+    // console.log(fitness);
 
     let main=document.getElementById('container')
     main.innerHTML=null;
-    fitness.forEach((el)=>{
+    wfh.forEach((el)=>{
         let div=document.createElement('div')
         let img=document.createElement('img')
         img.src=el.img;
@@ -21,13 +20,18 @@ let append=()=>{
         p.innerText=el.price;
         let btn=document.createElement('button')
         btn.innerText='Add to Cart'
+        btn.className='button'
         btn.addEventListener('click',()=>{
-            addTocart()
+            addTocart(el)
         })
         
         div.append(img,h3,p,btn)
         main.append(div)
     })
 }
-append()
-
+append();
+let addTocart = (el) => {
+    cart_data.push(el);
+    alert(`Product Added Successfully`);
+    localStorage.setItem('cart',JSON.stringify(cart_data));
+};

@@ -71,8 +71,7 @@
     import nvbr from './components/nvbr.js';
     document.querySelector("#nav_container").innerHTML = nvbr();
 
-    import { data } from './components/data.js';
-    // let data = JSON.parse(localStorage.getItem("cart"))||[];
+    let data = JSON.parse(localStorage.getItem("cart"))||[];
     console.log(data);
 
     let container = document.querySelector('#container');
@@ -83,16 +82,16 @@
         let quentity = 0;
         let total = 0;
         container.innerHTML = null;
-        data.forEach(({ imageUrl, title, Price }, index) => {
-            total += Number(Price);
+        data.forEach(({ img, name, price }, index) => {
+            total += Number(price);
             quentity++;
             let div = document.createElement("div");
             let i = document.createElement("img");
-            i.src = imageUrl;
+            i.src = img;
             let t = document.createElement("p");
-            t.innerText = title;
+            t.innerText = name;
             let p = document.createElement("h1");
-            p.innerText = Price;
+            p.innerText = price;
             let removeBtn = document.createElement("button");
             removeBtn.innerText = "Delete";
             removeBtn.style.color = 'red';
