@@ -3,6 +3,8 @@
     
 import nvbr from './components/nvbr.js';
 document.querySelector("#nav_container").innerHTML = nvbr();
+import auth from './components/auth.js';
+    auth();
 
 import { fitness } from "./fitness_data.js";
 

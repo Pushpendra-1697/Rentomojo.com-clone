@@ -1,7 +1,9 @@
 import { wfh } from "./credential.js";
 
 import nvbr from './components/nvbr.js';
-    document.querySelector("#nav_container").innerHTML = nvbr();
+document.querySelector("#nav_container").innerHTML = nvbr();
+    import auth from './components/auth.js';
+    auth();
 
 let cart_data = JSON.parse(localStorage.getItem("cart"))||[];
 

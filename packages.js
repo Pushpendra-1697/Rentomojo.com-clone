@@ -1,6 +1,8 @@
 import { packages_data , apartment_data } from "./packages_data.js";
 import nvbr from './components/nvbr.js';
 document.querySelector('#navbar').innerHTML=nvbr();
+import auth from './components/auth.js';
+    auth();
 
 let renderDom = () => {
     let cont = document.getElementById("container");
