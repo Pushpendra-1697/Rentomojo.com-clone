@@ -26,9 +26,8 @@
 #main{
     display: flex;
     gap:40px;
-    margin: 40px 0px;
-    margin-left: 10%;
-    margin-left: 10%;
+    margin: 120px 0px 60px 10%;
+
 }
 #sidebar{
     width: 20%;

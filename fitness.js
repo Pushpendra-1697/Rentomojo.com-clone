@@ -40,3 +40,11 @@ let addTocart = (el) => {
     localStorage.setItem('cart',JSON.stringify(cart_data));
 };
 
+
+    let value=document.getElementById('submit')
+    value.addEventListener('click',()=>{
+        alert('Thank You, Got your request')
+
+    })
+
+
