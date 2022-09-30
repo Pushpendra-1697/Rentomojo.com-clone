@@ -1,5 +1,9 @@
 import { wfh } from "./credential.js";
 
+import nvbr from './components/nvbr.js';
+    document.querySelector("#nav_container").innerHTML = nvbr();
+
+let cart_data = JSON.parse(localStorage.getItem("cart"))||[];
 
 let append=()=>{
     // console.log(fitness);
@@ -18,11 +22,15 @@ let append=()=>{
         btn.innerText='Add to Cart'
         btn.className='button'
         btn.addEventListener('click',()=>{
-            addTocart()
+            addTocart(el)
         })
         
         div.append(img,h3,p,btn)
         main.append(div)
     })
 }
-append()
+append();
+let addTocart = (el) => {
+    cart_data.push(el);
+    localStorage.setItem('cart',JSON.stringify(cart_data));
+};
