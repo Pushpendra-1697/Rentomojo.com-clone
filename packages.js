@@ -1,4 +1,7 @@
 import { packages_data , apartment_data } from "./packages_data.js";
+import nabr from "./fw20_0536/components/nvbr.js";
+let navbar = document.getElementById("navbar");
+navbar.innerHTML=nabr();
 
 let renderDom = () => {
     let cont = document.getElementById("container");
