@@ -1,273 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home/Landing Page</title>
-    <link rel="stylesheet" href="./style/navbar.css" />
-    <style>
-      #container {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
 
-        /* gap: 10px; */
-        background-color: #fff;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home/Landing Page</title>
+  <link rel="stylesheet" href="./style/navbar.css" />
+  <style>
+    #container {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      margin: 10% 0;
+    }
 
-        margin: 10% 0;
+    .mainRow {
+      width: 100%;
+      height: 100vh;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+    }
 
-      }
-      .mainRow {
-        width: 100%;
-        height: 100vh;
-       margin-top: 60px;
-        display: flex;
-        flex-direction: column;
-      }
-      #carazol {
-        margin: auto;
-        margin-top: 15px;
-        width: 90%;
-        border-radius: 20px;
-      }
-      #carazol > img {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-      }
-      #carazol > .btn {
-        text-align: center;
-        font-weight: bolder;
-        height: 50px;
-        width: 30px;
-      }
-      #next {
-        position: absolute;
-        top: 250px;
-        right: 55px;
-      }
-      #prev {
-        position: absolute;
-        top: 250px;
-        left: 55px;
-      }
-      #category{
-        margin: auto;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        width: 90%;
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        /* border: 1px solid red; */
-      }
-      .category{
-        width: 130px;
-        height: 80px;
-        border-radius: 10px;
-        background-color: #fff;
-        /*  */
-        border: 0.1px solid gray;
-      
-      }
-      .category:hover{
-        cursor: pointer;
-        border:0px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-      .category>a>h3{
-        text-align: center;
-        font-size: small;
-        font-weight: lighter;
-      }
-      .category>a>img{
-        width: 100%;
-        border-radius: 10px 10px ;
-        height: 70%;
-      }
-      a{
-        color:black;
-        text-decoration: none;
-      }
+    #carazol {
+      margin: auto;
+      margin-top: 15px;
+      width: 90%;
+      border-radius: 20px;
+    }
 
-      #Sndrow{
-        /* margin-top: 10px; */
-        background-color: rgb(245,247,250);
-      }
-     #charSrow{
+    #carazol>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    #carazol>.btn {
+      text-align: center;
+      font-weight: bolder;
+      height: 50px;
+      width: 30px;
+    }
+
+    #next {
+      position: absolute;
+      top: 250px;
+      right: 55px;
+    }
+
+    #prev {
+      position: absolute;
+      top: 250px;
+      left: 55px;
+    }
+
+    #category {
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      width: 90%;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .category {
+      width: 130px;
+      height: 80px;
+      border-radius: 10px;
+      background-color: #fff;
+      border: 0.1px solid gray;
+    }
+
+    .category:hover {
+      cursor: pointer;
+      border: 0px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .category>a>h3 {
+      text-align: center;
+      font-size: small;
+      font-weight: lighter;
+    }
+
+    .category>a>img {
+      width: 100%;
+      border-radius: 10px 10px;
+      height: 70%;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    #Sndrow {
+      background-color: rgb(245, 247, 250);
+    }
+
+    #charSrow {
       display: flex;
       padding: 0px 50px;
       align-items: center;
       justify-content: space-between;
       border: 1px solid red;
-     }
-     #Btn2{
+    }
+
+    #Btn2 {
       width: 110px;
       height: 50px;
       border: 1px solid sienna;
       display: flex;
       align-items: center;
       justify-content: space-between;
-     }
-     #Btn2>button{
+    }
+
+    #Btn2>button {
       width: 50px;
       height: 50px;
       border-radius: 50%;
       color: black;
       border: 0.5px solid black;
-     }
-     #appedndCategory{
+    }
+
+    #appedndCategory {
       display: flex;
       gap: 50px;
       overflow-x: scroll;
-      background-color: rgb(245,247,250);
+      background-color: rgb(245, 247, 250);
       border: 1px solid blueviolet;
-     }
-     .card{
+    }
+
+    .card {
       padding: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      /* height: auto; */
       border: 1px solid black;
-     }
-     .card>img{
+    }
+
+    .card>img {
       width: 250px;
       height: 80%;
-     }
-     /* .card>button{
-      height: 25px;
-      position: relative;
-      left: 140px;
-      bottom:20px
-     } */
-     .pBtn{
+    }
+
+    .pBtn {
       padding: 0px 10px 0px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: #fff;
-     }
-     .pBtn>button{
+    }
+
+    .pBtn>button {
       width: 100px;
       height: 30px;
       color: red;
       background-color: #fff;
       border: 0.5px solid red;
       border-radius: 2px;
-     }
-     .pBtn>button:hover{
+    }
+
+    .pBtn>button:hover {
       color: #fff;
       background-color: red;
       border: 0px;
       border-radius: 2px;
-     }
-     #rent{
+    }
+
+    #rent {
       font-size: small;
       color: lightgray;
       font-weight: 100;
-     }
-    
-     #Sline>h1>span{
+    }
+
+    #Sline>h1>span {
       font-size: 30px;
       font-weight: lighter;
       color: gray;
-     }
-    </style>
-  </head>
-  <body>
-    <div id="nav_container"></div>
-    <div id="showCity"></div>
-    <div id="showSearchItem"></div>
-    <div id="container">
-      <div class="mainRow" id="Fstrow">
-        <div id="carazol">
-          <img id="image" alt="" />
-          <button class="btn" id="next">></button>
-          <button class="btn" id="prev"><</button>
-        </div>
-        <div id="category">
-         <div class="category">
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav_container"></div>
+  <div id="top"></div>
+
+
+
+
+  <div id="showCity"></div>
+  <div id="showSearchItem"></div>
+  <div id="container">
+    <div class="mainRow" id="Fstrow">
+      <div id="carazol">
+        <img id="image" alt="" />
+        <button class="btn" id="next"> > </button>
+        <button class="btn" id="prev"> < </button>
+      </div>
+      <div id="category">
+        <div class="category">
           <a href="packages.html">
-            <img src="https://www.kindpng.com/picc/m/601-6018149_icon-product-sending-package-icon-hd-png-download.png" alt="">
+            <img src="https://www.kindpng.com/picc/m/601-6018149_icon-product-sending-package-icon-hd-png-download.png"
+              alt="">
             <h3>Packages</h3>
           </a>
-         </div>
-         <div class="category">
+        </div>
+        <div class="category">
           <a href="">
-          <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="">
-          <h3>Furniture</h3>
+            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="">
+            <h3>Furniture</h3>
           </a>
-          
-         </div>
-         <div class="category">
+
+        </div>
+        <div class="category">
           <a href="">
-            <img src="https://img.freepik.com/premium-vector/washing-machine-icon-vector-graphics_292645-278.jpg?w=2000" alt="">
-          <h3>Appliances</h3>
+            <img src="https://img.freepik.com/premium-vector/washing-machine-icon-vector-graphics_292645-278.jpg?w=2000"
+              alt="">
+            <h3>Appliances</h3>
           </a>
-          
-         </div>
-         <div class="category">
+
+        </div>
+        <div class="category">
           <a href="">
             <img src="https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2642-thumb.png" alt="">
-          <h3>Electronics</h3>
+            <h3>Electronics</h3>
           </a>
-         </div>
-         <div class="category">
+        </div>
+        <div class="category">
           <a href="../fitness.html">
-            <img src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-vector-cycling-machine-icon-png-image_872127.jpg" alt="">
-          <h3>Fitness</h3>
+            <img
+              src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-vector-cycling-machine-icon-png-image_872127.jpg"
+              alt="">
+            <h3>Fitness</h3>
           </a>
-          
-         </div>
-         <div class="category">
+
+        </div>
+        <div class="category">
           <a href="../wfh_Credential.html">
-            <img src="https://png.pngtree.com/png-vector/20190326/ourlarge/pngtree-vector-office-table-icon-png-image_865258.jpg" alt="">
-          <h3>WFH Essentials</h3>
+            <img
+              src="https://png.pngtree.com/png-vector/20190326/ourlarge/pngtree-vector-office-table-icon-png-image_865258.jpg"
+              alt="">
+            <h3>WFH Essentials</h3>
           </a>
-          
-         </div>
+
         </div>
       </div>
-      <div class="mainRow" id="Sndrow">
-        <div id="charSrow">
-          <div id="Sline">
-            <h1>You'll love to  <br><span>
+    </div>
+    <div class="mainRow" id="Sndrow">
+      <div id="charSrow">
+        <div id="Sline">
+          <h1>You'll love to <br><span>
               take these home
             </span></h1>
-          </div>
-          <hr>
-          <div id="Btn2">
-            <button id="nextdiv">></button>
-            <button id="prewdiv"><</button>
-          </div>
         </div>
-        <div id="appedndCategory">
+        <hr>
+        <div id="Btn2">
+          <button id="nextdiv"> > </button>
+          <button id="prewdiv"> < </button>
         </div>
       </div>
-      <div class="mainRow" id="3rdrow"></div>
-      <div class="mainRow" id="4throw"></div>
+      <div id="appedndCategory">
+      </div>
     </div>
-    
-  </body>
+    <div class="mainRow" id="3rdrow"></div>
+    <div class="mainRow" id="4throw"></div>
+  </div>
+
+
+
+
+  
+  <a class="Top" href="#top"><button> 🔝 </button></a>
+</body>
+
 </html>
 <script src="./scripts/index.js"></script>
 <script type="module" src="./scripts/index_carzol.js"></script>
 <script type="module">
 
 
-   
+
 
   import nvbr from './components/nvbr.js';
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
   import auth from './components/auth.js';
-    auth();
+  auth();
 
-    
+
   let imgdata1 = [
     { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
     { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
