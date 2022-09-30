@@ -59,7 +59,7 @@ import {data,imgdata1} from "../components/data.js"
       divP.setAttribute("class","pBtn")
 
       let price=document.createElement("p");
-      price.innerText=`₹ ${Price}`;
+      price.innerText=`₹ ${Price}/mo`;
       let seeMore=document.createElement("button");
       seeMore.setAttribute("id","seemoreBtn")
       seeMore.innerText="See more"
@@ -70,41 +70,41 @@ import {data,imgdata1} from "../components/data.js"
     });
   }
 
-  
-  // let arr=[1,2,3,4,5,6,7,8,9,10]
   let arr1=[];
-    for(let i=0;i<3;i++){
+    for(let i=0;i<5;i++){
       arr1.push(data[i])
     }
     appendData(arr1)
-   let i=2;
+   let i=5;
 
   let nextdiv = () => {
-    if(i===data.length-3){
+    if(i===data.length){
       return;      
     }
     ++i;
     arr1.shift();
     arr1.push(data[i]);
     appendData(arr1)
-    console.log(i);
+    //console.log(i);
   };
   
-  let prewdiv=()=>{
-    --i;
-    
+  let prewdiv=()=>{ 
     if(i===0){
       return;
     }
-    console.log(i);
-    arr1.unshift(data[i]);
-    // console.log(i-1);
-    arr1.pop()
     i--;
+    arr1.unshift(data[i]);
+  //  if(arr1.length>=5){
+    arr1.pop()
+  //  }
     appendData(arr1)
-    console.log(i);
+   // console.log(i);
   }
   
 
   document.getElementById("nextdiv").addEventListener("click",nextdiv)
   document.getElementById("prewdiv").addEventListener("click",prewdiv)
+
+
+
+  

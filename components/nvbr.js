@@ -8,7 +8,19 @@ function nvbr() {
       /></a>
       </li>
 
-      <li id="Scity">Select City</li>
+      <li >
+      <select name="" id="Scity">
+        <option value="">Delhi</option>
+        <option value="">Banglore</option>
+        <option value="">Mumbai</option>
+        <option value="">Pune</option>
+        <option value="">Delhi</option>
+        <option value="">Noida</option>
+        <option value="">Gurugaon</option>
+        <option value="">Hyderabad</option>
+        <option value="">Chennai</option>
+      </select>
+    </li>
     </ul>
     <ul>
       <li>
