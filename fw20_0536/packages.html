@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="packages.css">
+    <link rel="icon" href="">
+</head>
+<body>
+    <div id="navbar"></div>
+    <br>
+
+    <div class="heading">
+        <h2>Choose by Room Type</h2>
+    </div>
+    
+    <div id="container"></div>
+    <br>
+    
+    <div class="heading">
+        <h2>
+            Choose by Apartment Type
+        </h2>
+    </div>
+    <br>
+    <div id="container_2"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="footer"></div>   
+</body>
+</html>
+<script type="module" src="packages.js"></script>
+<script type="module" src="./scripts/index.js">
+    import nvbr from "./components/nvbr.js";
+
+    let nav_bar = document.getElementById("navbar");
+    nav_bar.innerHTML = nvbr();
+</script>
