@@ -104,7 +104,7 @@ let appendDom = () => {
 
 
 let goto = (id) => {
-    console.log(id);
+    window.location.href="sub_package.html"
 }
 
 
