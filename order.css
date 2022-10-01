@@ -1,0 +1,20 @@
+#heading{
+    text-align: center;
+    height:100px;
+    width:100%;
+}
+#heading>a>img{
+    height:70px;
+    width:350px;
+}
+#logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    text-align: center;
+}
+#detail{
+    color: green;
+}
