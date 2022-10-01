@@ -1,152 +1,112 @@
 #cont{
-    margin: 7% 0;
-    display:flex;
-    width:100%;
-    height: 600px;
+  margin: 7% 0;
+  display:flex;
+  width:100%;
+  height: 600px;
 }
 #first{
-    height:100%;
-    width:70%;
+  height:100%;
+  width:70%;
 }
 #first>img{
-    width:100%;
-    height:100%;
+  width:100%;
+  height:100%;
 }
 #second{
-    
-    height:100%;
-    width:30%;
-    
+  
+  height:100%;
+  width:30%;
+  
 }
 #title{
-    color: rgb(99, 97, 97);
-   font-size: 15px;
-    width:100%;
+  color: rgb(99, 97, 97);
+ font-size: 15px;
+  width:100%;
 }
 
 h3{
-   
-    color: rgb(99, 97, 97);
-    font-size: 15px;
-    
+ 
+  color: rgb(99, 97, 97);
+  font-size: 15px;
+  
 }
 input{
-    width:10%;
+  width:10%;
 }
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  #second>#sec{
-    height:100%;
-    width:80%;
-   
-    margin:auto;
-    line-height: 50px;
-  }
-  #sec>#cal{
-    height:100px;
-    width:100%;
-  
-    margin-top: 30px;
-    display:flex;
-  }
-  #amt{
-    display:grid;
-    width:50%;
-    height:100%;
-    border:1px solid grey;
-    justify-content: center;
-    align-items: center;
-  }
-  #amt1{
-    display:grid;
-    width:50%;
-    height:100%;
-    border:1px solid grey;
-    justify-content: center;
-    align-items: center;
-  }
-  button{
-  
-    margin-top: 30px;
-   width:100%;
-   height:35px;
-   border:1px solid teal;
-   background-color: white;
-   color:teal;
-  }
-  #amt2{
-    display:flex;
-    text-align: center;
-    align-items: center;
-    height:70px;
-    width:100%;
-    border:1px solid grey;
-    gap:20px;
-  }
-  h5{
-    width:80%;
-    line-height: 20px;
-  }
-  #book{
-    margin-top: 20px;
-    background-color: rgb(179, 29, 29);
-    color: white;
-    height:60px;
-    border-radius: 5px;
-    font-size: 20px;
-    border:none;
-  }
-  #offer{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#second>#sec{
+  height:100%;
+  width:80%;
+ 
+  margin:auto;
+  line-height: 50px;
+}
+#sec>#cal{
+  height:100px;
+  width:100%;
 
-    display:grid;
-    align-items: center;
-    justify-content: center;
-    height:10%;
-    width:100%;
-    border:1px dashed teal;
-    line-height: 20px;
-  }
+  margin-top: 30px;
+  display:flex;
+}
+#amt{
+  display:grid;
+  width:50%;
+  height:100%;
+  border:1px solid grey;
+  justify-content: center;
+  align-items: center;
+}
+#amt1{
+  display:grid;
+  width:50%;
+  height:100%;
+  border:1px solid grey;
+  justify-content: center;
+  align-items: center;
+}
+button{
 
+  margin-top: 30px;
+ width:100%;
+ height:35px;
+ border:1px solid teal;
+ background-color: white;
+ color:teal;
+}
+#amt2{
+  display:flex;
+  text-align: center;
+  align-items: center;
+  height:70px;
+  width:100%;
+  border:1px solid grey;
+  gap:20px;
+}
+h5{
+  width:80%;
+  line-height: 20px;
+}
+#book{
+  margin-top: 20px;
+  background-color: rgb(179, 29, 29);
+  color: white;
+  height:60px;
+  border-radius: 5px;
+  font-size: 20px;
+  border:none;
+}
+#offer{
 
-  #moj{
-    margin-top: 10%;
-    line-height: 30px;
-    padding: 26px;
-    background-color: rgb(245,247,250);
-  }
-  #moj button{
-    padding: 10px;
-    border-radius: 10px;
-  }
-  #footer{
-    display: flex;
-    gap: 50px;
-    margin: auto;
-    width: 70%;
-  }
-  #footer > div{
-    width: 100%;
-  }
-  #footer img{
-    width: 100px;
-  }
-  #footer1{
-    display: flex;
-    gap: 5%;
-    margin: auto;
-    width: 50%;
-  }
-  #footer1 > div{
-    width: 100%;
-  }
-  hr{
-    margin: 4% 0;
-  }
-  #footer1 i{
-    margin:4% 6%;
-    font-size: 26px;
-  }
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  height:10%;
+  width:100%;
+  border:1px dashed teal;
+  line-height: 20px;
+}

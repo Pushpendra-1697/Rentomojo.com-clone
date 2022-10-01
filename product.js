@@ -21,6 +21,7 @@ document.getElementById("title").innerText=y.title;
 
 let h1=document.querySelector("h1");
 h1.innerText=y.price
+let amount=y.price;
 
 let s=document.getElementById("shan");
 let d="Delivery date : ";
@@ -33,26 +34,26 @@ s.innerText=d+date+" "+month+" "+year
 
 
 let h2=document.getElementById("total");
-function myfunc(){
-    let month=document.getElementById("quan").value;       
-    h2.innerText=y.price*Number(month);
-}
+document.getElementById("quan").addEventListener("input",function(){
+    myfunc()
+})
+document.getElementById("book").addEventListener("click",function(){
+    myfun()
+})
 
+function myfunc(){
+    let quantity=document.getElementById("quan").value; 
+    if(quantity <= 0){
+        return;
+    }      
+    h2.innerText=amount*Number(quantity);
+}
 function myfun(){
-    let month=document.getElementById("quan").value;    
-    if(h2.innerText==""){
-        alert ("please select months")
+    if(h2.innerText==0){
+        alert ("please select Months");
+        return;
     }
     else{
-        window.location.href="payment.html" 
+        window.location.href="payment.html"
     }
 }
-
-
-
-
-
-
-
-
-

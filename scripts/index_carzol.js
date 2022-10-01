@@ -64,6 +64,11 @@ import {data,imgdata1} from "../components/data.js"
       seeMore.setAttribute("id","seemoreBtn")
       seeMore.innerText="See more";
 
+      seeMore.addEventListener("click",function(){
+        myfunc({imageUrl,title,Price})
+      });
+
+
       divP.append(price,seeMore)
       div.append(image,Title,rent,divP);
       container.append(div);
@@ -102,3 +107,9 @@ import {data,imgdata1} from "../components/data.js"
 
   document.getElementById("nextdiv").addEventListener("click",nextdiv)
   document.getElementById("prewdiv").addEventListener("click",prewdiv)
+
+  function myfunc({imageUrl,title,Price}){
+    window.location.href="product.html"
+    let x=new product(imageUrl,title,Price);
+    localStorage.setItem("product",JSON.stringify(x));
+  };
