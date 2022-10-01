@@ -1,304 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home/Landing Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home/Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./style/navbar.css" />
-  <style>
-    #container {
-      position: relative;
-      top: 95px;
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-      background-color: #fff;
-    }
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <style>
+      #container {
+        position: relative;
+        top: 95px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        background-color: #fff;
+      }
+      .mainRow {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid blue; */
+      }
+      #carazol {
+        margin: auto;
+        margin-top: 15px;
+        width: 90%;
+        border-radius: 20px;
+      }
+      #carazol > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+      #carazol > .btn {
+        text-align: center;
+        font-weight: bolder;
+        height: 50px;
+        width: 30px;
+      }
+      #next {
+        position: relative;
+        left: 965px;
+        bottom: 200px;
+      }
+      #prev {
+        position: absolute;
+        top: 200px;
+        left: 55px;
+      }
+      #category {
+        margin: auto;
+        margin-top: -40px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+      }
+      .category {
+        width: 120px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 0.1px solid gray;
+      }
+      .category:hover {
+        cursor: pointer;
+        border: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .category > a > h3 {
+        text-align: center;
+        font-size: small;
+        font-weight: lighter;
+      }
+      .category > a > img {
+        width: 100%;
+        border-radius: 10px 10px;
+        height: 70%;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
 
-    .mainRow {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid blue;
-    }
-
-    #carazol {
-      margin: auto;
-      margin-top: 15px;
-      width: 90%;
-      border-radius: 20px;
-    }
-
-    #carazol>img {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-    }
-
-    #carazol>.btn {
-      text-align: center;
-      font-weight: bolder;
-      height: 50px;
-      width: 30px;
-    }
-
-    #next {
-      position: relative;
-      left: 965px;
-      bottom: 200px;
-    }
-
-    #prev {
-      position: absolute;
-      top: 200px;
-      left: 55px;
-    }
-
-    #category {
-      margin: auto;
-      margin-top: -40px;
-      width: 90%;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-around;
-      /* border: 1px solid red; */
-    }
-
-    .category {
-      width: 120px;
-      height: 70px;
-      border-radius: 10px;
-      background-color: #fff;
-      border: 0.1px solid gray;
-
-    }
-
-    .category:hover {
-      cursor: pointer;
-      border: 0px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    .category>a>h3 {
-      text-align: center;
-      font-size: small;
-      font-weight: lighter;
-    }
-
-    .category>a>img {
-      width: 100%;
-      border-radius: 10px 10px;
-      height: 70%;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
-
-    #Sndrow {
-      height: auto;
-      padding: 20px 0px 20px 0px;
-      background-color: rgb(245, 247, 250);
-    }
-
-    #charSrow {
-      z-index: 5;
-      display: flex;
-      padding: 0px 50px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    #Btn2 {
-      width: 110px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .Btn2>button {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      color: black;
-      border: 0.5px solid black;
-      opacity: 0.5;
-    }
-
-    .Btn2>button:hover {
-      opacity: 1;
-    }
-
-    #appedndCategory {
-      display: block;
-      overflow: hidden;
-      display: flex;
-      gap: 30px;
-      flex-direction: row;
-      justify-content: space-around;
-      background-color: rgb(245, 247, 250);
-      /* border: 1px solid blueviolet; */
-    }
-
-    .card {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      /* height: auto; */
-      /* border: 1px solid black; */
-    }
-
-    .card>img {
-      width: 250px;
-      height: 80%;
-    }
-
-    .pBtn {
-      padding: 0px 10px 0px 0px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #fff;
-    }
-
-    .pBtn>button {
-      width: 100px;
-      height: 30px;
-      color: red;
-      background-color: #fff;
-      border: 0.5px solid red;
-      border-radius: 2px;
-    }
-
-    .pBtn>button:hover {
-      color: #fff;
-      background-color: red;
-      border: 0px;
-      border-radius: 2px;
-    }
-
-    #rent {
-      font-size: small;
-      color: lightgray;
-      font-weight: 100;
-    }
-
-    #Sline>h3 {
-      font-size: 25px;
-      font-weight: lighter;
-    }
-
-    #Sline>h3>span {
-      font-size: 25px;
-      font-weight: lighter;
-      color: gray;
-    }
-
-    #appedndCategory_A {
-      padding: 10px 50px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 20px 30px;
-      /* border: 1px solid red; */
-    }
-
-    .grid {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .grid>h3 {
-      font-weight: lighter;
-    }
-
-    .grid,
-    #comment>p {
-      margin-top: 10px;
-      color: gray;
-      font-weight: lighter;
-      line-height: 1.4;
-    }
-
-    #comment hr {
-      margin-top: 10px;
-      width: 55px;
-      border: none;
-      height: 2px;
-      background: orangered;
-    }
-
-    #Sline>hr {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 55px;
-      border: none;
-      height: 2px;
-      background: orangered;
-    }
-
-    .imgG>img {
-      width: 50px;
-      height: 50px;
-    }
-
-    #knowmore {
-      margin-top: 10px;
-      padding-left: 50px;
-    }
-
-    #knowmore>h3 {
-      font: size 14px;
-      font-weight: lighter;
-      color: lightseagreen;
-
-    }
-
-    #fourthRow {
-      margin: auto;
-      padding: 10px;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-    }
-
-    #comment {
-      margin: auto;
-      margin-top: 5px;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid red;
-    }
-
-    #slideComment {
-      width: 70%;
-      height: 300px;
-      border: 1px solid red;
-    }
-    
-
-
-
-
+      #Sndrow {
+        height: auto;
+        padding: 20px 0px 20px 0px;
+        background-color: rgb(245, 247, 250);
+      }
+      #charSrow {
+        z-index: 5;
+        display: flex;
+        padding: 0px 50px;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid red; */
+      }
+      #Btn2 {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .Btn2 > button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: black;
+        border: 0.5px solid black;
+        opacity: 0.5;
+      }
+      .Btn2 > button:hover {
+        opacity: 1;
+      }
+      #appedndCategory {
+        display: block;
+        overflow: hidden;
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(245, 247, 250);
+        /* border: 1px solid blueviolet; */
+      }
+      .card {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* height: auto; */
+        /* border: 1px solid black; */
+      }
+      .card > img {
+        width: 250px;
+        height: 80%;
+      }
+      .pBtn {
+        padding: 0px 10px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+      }
+      .pBtn > button {
+        width: 100px;
+        height: 30px;
+        color: red;
+        background-color: #fff;
+        border: 0.5px solid red;
+        border-radius: 2px;
+      }
+      .pBtn > button:hover {
+        color: #fff;
+        background-color: red;
+        border: 0px;
+        border-radius: 2px;
+      }
+      #rent {
+        font-size: small;
+        color: lightgray;
+        font-weight: 100;
+      }
+      #Sline > h3 {
+        font-size: 25px;
+        font-weight: lighter;
+      }
+      #Sline > h3 > span {
+        font-size: 25px;
+        font-weight: lighter;
+        color: gray;
+      }
+      #appedndCategory_A {
+        padding: 10px 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px 30px;
+        /* border: 1px solid red; */
+      }
+      .grid {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .grid > h3 {
+        font-weight: lighter;
+      }
+      .grid,
+      #comment > p {
+        margin-top: 10px;
+        color: gray;
+        font-weight: lighter;
+        line-height: 1.4;
+      }
+      #comment hr {
+        margin-top: 10px;
+        width: 55px;
+        border: none;
+        height: 2px;
+        background: orangered;
+      }
+      #Sline > hr {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 55px;
+        border: none;
+        height: 2px;
+        background: orangered;
+      }
+      .imgG > img {
+        width: 50px;
+        height: 50px;
+      }
+      #knowmore {
+        margin-top: 10px;
+        padding-left: 50px;
+      }
+      #knowmore > h3 {
+        font: size 14px;
+        font-weight: lighter;
+        color: lightseagreen;
+      }
+      #fourthRow {
+        margin: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+      #comment {
+        margin: auto;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+      }
+      #comment .Btn2{
+        margin-top: 20px;
+      }
+      #slideComment {
+        margin: auto;
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        /* transition: 0.5s all ease-out; */
+        /* border: 1px solid red; */
+      }
+      .commentCard {
+        margin-top: 0px;
+        width: 250px;
+        border-radius: 10px;
+        background-color: rgb(245, 247, 250);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* border: 1px solid brown; */
+      }
+      .rowOne {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        justify-content: start;
+        /* border: 1px solid blue; */
+      }
+      .rowOne img {
+        padding-left: 10px;
+        width:30%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      .rowTwo p {
+        padding: 10px;
+        font-family: Muli,sans-serif!important;
+        margin: auto;
+        margin-top: 20px;
+        text-align:left;
+        color: gray;
+        font-weight: lighter;
+        font-size: 12px;
+        line-height :1.4;
+      }
 
 
 
-
-    /*footer css*/
-    #moj{
+      #moj{
       margin-top: 10%;
       line-height: 30px;
       padding: 26px;
@@ -337,281 +332,421 @@
       font-size: 26px;
     }
 
-
-  </style>
-</head>
-
-<body>
-  <div id="nav_container"></div>
-  <div id="top"></div>
-
-  <div id="showCity"></div>
-  <div id="showSearchItem"></div>
-  <div id="container">
-    <div class="mainRow" id="Fstrow">
-      <div id="carazol">
-        <img id="image" alt="" />
-        <button class="btn" id="next"> > </button>
-        <button class="btn" id="prev"> < </button>
-      </div>
-      <div id="category">
-        <div class="category">
-          <a href="packages.html">
-            <img src="https://www.kindpng.com/picc/m/601-6018149_icon-product-sending-package-icon-hd-png-download.png"
-              alt="">
-            <h3>Packages</h3>
-          </a>
+    </style>
+  </head>
+  <body>
+    <div id="nav_container"></div>
+    <div id="showCity"></div>
+    <div id="showSearchItem"></div>
+    <div id="container">
+      <div class="mainRow" id="Fstrow">
+        <div id="carazol">
+          <img id="image" alt="" />
+          <button class="btn" id="next">></button>
+          <button class="btn" id="prev"><</button>
         </div>
-        <div class="category">
-          <a href="">
-            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="bed">
-            <h3>Furniture</h3>
-          </a>
-
-        </div>
-        <div class="category">
-          <a href="">
-            <img src="https://img.freepik.com/premium-vector/washing-machine-icon-vector-graphics_292645-278.jpg?w=2000"
-              alt="">
-            <h3>Appliances</h3>
-          </a>
-
-        </div>
-        <div class="category">
-          <a href="">
-            <img src="https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2642-thumb.png" alt="">
-            <h3>Electronics</h3>
-          </a>
-        </div>
-        <div class="category">
-          <a href="../fitness.html">
-            <img
-              src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-vector-cycling-machine-icon-png-image_872127.jpg"
-              alt="">
-            <h3>Fitness</h3>
-          </a>
-
-        </div>
-        <div class="category">
-          <a href="../wfh_Credential.html">
-            <img
-              src="https://png.pngtree.com/png-vector/20190326/ourlarge/pngtree-vector-office-table-icon-png-image_865258.jpg"
-              alt="">
-            <h3>WFH Essentials</h3>
-          </a>
-
-        </div>
-      </div>
-    </div>
-    <div class="mainRow" id="Sndrow">
-      <div id="charSrow">
-        <div id="Sline">
-          <h3>You'll love to <br>
-            <span>take these home</span>
-          </h3>
-          <hr>
-        </div>
-
-        <div class="Btn2" id="Btn2">
-          <button id="nextdiv"> > </button>
-          <button id="prewdiv"> < </button>
-        </div>
-      </div>
-      <div id="appedndCategory">
-      </div>
-    </div>
-    <div class="mainRow" id="thrdRow">
-      <div id="charSrow">
-        <div id="Sline">
-          <h3> There's more<br>
-            <span>to renting</span>
-          </h3>
-          <hr>
-        </div>
-      </div>
-      <div id="appedndCategory_A">
-        <div class="grid">
-          <div class="imgG">
-            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="bed">
-          </div>
-          <h3>Finest-quality products</h3>
-          <p>Quality matters to you, and us! That's why we do a strict quality-check for every product.</p>
-        </div>
-
-        <div class="grid">
-          <div class="imgG">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Location_icon_from_Noun_Project.png"
-              alt="location">
-          </div>
-          <h3>Free relocation</h3>
-          <p>Changing your house or even your city? We'll relocate your rented products for free.</p>
-        </div>
-
-        <div class="grid">
-          <div class="imgG">
-            <img
-              src="https://w7.pngwing.com/pngs/102/318/png-transparent-black-gear-logo-computer-icons-gear-maintenance-miscellaneous-maintenance-black-and-white.png"
-              alt="Maitinance">
-          </div>
-          <h3>Free maintenance</h3>
-          <p>Keeping your rented products in a spick and span condition is on us, so you can sit back and relax.</p>
-        </div>
-
-        <div class="grid">
-          <div class="imgG">
-            <img src="https://static.thenounproject.com/png/1385986-200.png" alt="cencle">
-          </div>
-          <h3>Cancel anytime</h3>
-          <p>Pay only for the time you use the product and close your subscription without any hassle.</p>
-        </div>
-
-        <div class="grid">
-          <div class="imgG">
-            <img src="https://cdn1.iconfinder.com/data/icons/e-commerce-223/48/11-512.png" alt="return">
-          </div>
-          <h3>Easy return on delivery</h3>
-          <p>If you don't like the product on delivery, you can return it right away—no questions asked.</p>
-        </div>
-
-        <div class="grid">
-          <div class="imgG">
-            <img src="https://cdn4.iconfinder.com/data/icons/social-media-1-2/66/30-512.png" alt="Updating">
-          </div>
-          <h3>Keep upgrading</h3>
-          <p>Bored of the same product? Upgrade to try another, newer design and enjoy the change!</p>
-        </div>
-      </div>
-      <div id="knowmore">
-        <h3>Know more</h3>
-      </div>
-
-    </div>
-    <div class="mainRow" id="fourthRow">
-      <div id="comment">
-        <div id="Sline">
-          <h3> Over 1.5 lac <br>
-            <span>happy subscribers</span>
-          </h3>
-        </div>
-        <hr>
-        <p>Here's what they <br>
-          have to say <br>
-          about their <br>
-          RentoMojo <br>
-          experience.
-        </p>
-        <div class="Btn2">
-          <button> < </button>
-          <button> > </button>
-        </div>
-      </div>
-
-      <div id="slideComment"></div>
-    </div>
-  </div>
-
-
-  /*footer*/
-  <div id="moj">
-    <h1>RentoMojo: Upgrade To Your Dream Lifestyle At An Unbelievably Low Price!</h1>
-    <p>RentoMojo is your ticket to a better lifestyle in India. We provide designer furniture, the newest gadgets, and bestselling appliances on rent in major Indian cities. You can use the best products available in the market at just a fraction of their retail value. You pay us a small monthly fee, which becomes lesser the longer you rent from us.
-
-      Besides saving you money, we do our best to provide you with an exceptional, super-comfortable rental experience. Our ordering process is straightforward and efficient. You can order from us in a matter of minutes from your PC or smartphone. We offer speedy delivery in major Indian cities, namely Bangalore, Mumbai, Delhi, Chennai, Pune, Hyderabad, Gurgaon, and Noida.
-      
-      No matter what product you rent from us, we will provide you with several complementary benefits with it. The benefits range from a yearly product swap option to a periodic free maintenance service. These are benefits no regular retailer offers. Start renting now!</p>
-      <button>Read More >> </button>
-
-      <div id="footer">
-        <div>
-          <h4>RENTOMOJO</h4>
-          <p>About Us</p>
-          <p>Culture</p>
-          <p>Investors</p>
-          <p>Careers</p>
-          <p>Contact</p>
-          <p>Our Benefits</p>
-          <p>Sitemap</p>
-        </div>
-        <div>
-          <h4>INFORMATION
-            </h4>
-            <p>Blog</p>
-            <p>FAQs</p>
-            <p>Documents Required</p>
-        </div>
-        <div>
-          <h4>POLICIES</h4>
-            <p>Shipping Policy</p>
-            <p>Cancellation & Return</p>
-            <p>Privacy Policy</p>
-            <p>Rental Terms & Conditions</p>
-            <p>Referral Terms & Conditions</p>
-        </div>
-        <div>
-          <h4>NEED HELP ?</h4>
-          <button>Chat With us (9AM - 6PM) </button>
-          <p>jo@rentomojo.com</p>
-          <h4>DOWNLOAD APP</h4>
-
-          <div>
-            <a href="https://apps.apple.com/in/app/rentomojo-products-on-rent/id1404801676?_branch_match_id=1067694309670544985&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTNyu1MM8wL3bzigIAWVRPyxsAAAA%3D">
-                <img src="https://www.carbmanager.com/_nuxt/img/189f2dc.png" alt="">
+        <div id="category">
+          <div class="category">
+            <a href="packages.html">
+              <img
+                src="https://www.kindpng.com/picc/m/601-6018149_icon-product-sending-package-icon-hd-png-download.png"
+                alt=""
+              />
+              <h3>Packages</h3>
             </a>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <span>(565k+)</span>
-        </div>
-        <div>
-            <a href="https://play.google.com/store/apps/details?id=com.rentomojo&_branch_match_id=1067694309670544985&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTL3ILTfYKK052jAQA4IGbfRsAAAA%3D">
-                <img src="https://www.carbmanager.com/_nuxt/img/5665828.png" alt="">
+          </div>
+          <div class="category">
+            <a href="">
+              <img
+                src="https://hatil.com/sites/default/files/Bed.jpg"
+                alt="bed"
+              />
+              <h3>Furniture</h3>
             </a>
-        </div>
+          </div>
+          <div class="category">
+            <a href="">
+              <img
+                src="https://img.freepik.com/premium-vector/washing-machine-icon-vector-graphics_292645-278.jpg?w=2000"
+                alt=""
+              />
+              <h3>Appliances</h3>
+            </a>
+          </div>
+          <div class="category">
+            <a href="">
+              <img
+                src="https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2642-thumb.png"
+                alt=""
+              />
+              <h3>Electronics</h3>
+            </a>
+          </div>
+          <div class="category">
+            <a href="../fitness.html">
+              <img
+                src="https://png.pngtree.com/png-vector/20190328/ourlarge/pngtree-vector-cycling-machine-icon-png-image_872127.jpg"
+                alt=""
+              />
+              <h3>Fitness</h3>
+            </a>
+          </div>
+          <div class="category">
+            <a href="../wfh_Credential.html">
+              <img
+                src="https://png.pngtree.com/png-vector/20190326/ourlarge/pngtree-vector-office-table-icon-png-image_865258.jpg"
+                alt=""
+              />
+              <h3>WFH Essentials</h3>
+            </a>
+          </div>
         </div>
       </div>
-      <hr>
+      <div class="mainRow" id="Sndrow">
+        <div id="charSrow">
+          <div id="Sline">
+            <h3>
+              You'll love to <br />
+              <span>take these home</span>
+            </h3>
+            <hr />
+          </div>
 
-      <div id="footer1">
-        <div>© 2022. Edunetwork Pvt. Ltd.</div>
-        <div>
-          <a target="_blank" href="https://www.facebook.com/rentomojo">
-              <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a target="_blank" href="https://www.instagram.com/rentomojo/">
-              <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a target="_blank" href="https://twitter.com/rentomojo">
-              <i class="fa-brands fa-pinterest"></i>
-          </a>
-          <a target="_blank" href="https://www.youtube.com/c/RentomojoOfficial">
-              <i class="fa-brands fa-youtube"></i>
-          </a>
+          <div class="Btn2" id="Btn2">
+            <button id="nextdiv">></button>
+            <button id="prewdiv"><</button>
+          </div>
+        </div>
+        <div id="appedndCategory"></div>
       </div>
-        <div><a href="#top"><button>🔝</button></a></div>
+      <div class="mainRow" id="thrdRow">
+        <div id="charSrow">
+          <div id="Sline">
+            <h3>
+              There's more<br />
+              <span>to renting</span>
+            </h3>
+            <hr />
+          </div>
+        </div>
+        <div id="appedndCategory_A">
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://hatil.com/sites/default/files/Bed.jpg"
+                alt="bed"
+              />
+            </div>
+            <h3>Finest-quality products</h3>
+            <p>
+              Quality matters to you, and us! That's why we do a strict
+              quality-check for every product.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/74/Location_icon_from_Noun_Project.png"
+                alt="location"
+              />
+            </div>
+            <h3>Free relocation</h3>
+            <p>
+              Changing your house or even your city? We'll relocate your rented
+              products for free.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://w7.pngwing.com/pngs/102/318/png-transparent-black-gear-logo-computer-icons-gear-maintenance-miscellaneous-maintenance-black-and-white.png"
+                alt="Maitinance"
+              />
+            </div>
+            <h3>Free maintenance</h3>
+            <p>
+              Keeping your rented products in a spick and span condition is on
+              us, so you can sit back and relax.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://static.thenounproject.com/png/1385986-200.png"
+                alt="cencle"
+              />
+            </div>
+            <h3>Cancel anytime</h3>
+            <p>
+              Pay only for the time you use the product and close your
+              subscription without any hassle.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/e-commerce-223/48/11-512.png"
+                alt="return"
+              />
+            </div>
+            <h3>Easy return on delivery</h3>
+            <p>
+              If you don't like the product on delivery, you can return it right
+              away—no questions asked.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="imgG">
+              <img
+                src="https://cdn4.iconfinder.com/data/icons/social-media-1-2/66/30-512.png"
+                alt="Updating"
+              />
+            </div>
+            <h3>Keep upgrading</h3>
+            <p>
+              Bored of the same product? Upgrade to try another, newer design
+              and enjoy the change!
+            </p>
+          </div>
+        </div>
+        <div id="knowmore">
+          <h3>Know more</h3>
+        </div>
       </div>
-  </div>
-</body>
+      <div class="mainRow" id="fourthRow">
+        <div id="comment">
+          <div id="Sline">
+            <h3>
+              Over 1.5 lac <br />
+              <span>happy subscribers</span>
+            </h3>
+          </div>
+          <hr />
+          <p>
+            Here's what they <br />
+            have to say <br />
+            about their <br />
+            RentoMojo <br />
+            experience.
+          </p>
+          <div class="Btn2">
+            <button onclick="scrollHorizontaly()"><</button>
+            <button onclick="">></button>
+          </div>
+        </div>
+
+        <div id="slideComment">
+          <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="https://www.rentomojo.com/public/images/testimonials/kushal-tiwari.jpg"
+                alt=""
+              />
+              <h4>Kushal Tiwari</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                Marriage comes with a lot of unavoidable expenses in India and
+                spending a big chunk of your savings on furniture and white
+                goods could be a big challenge. RentoMojo not just took away all
+                our worries but in fact went to the extent of spoiling us. Where
+                I could have owned just some bare essentials after making a huge
+                hole in my pocket or paid unnecessary EMIs, I could smartly own
+                a lot of stuff which would have come much later on my list.
+                Heartfelt thanks to the whole Rentomojo team for making our
+                renting experience completely hassle-free. It has been two great
+                years and I am sure there are many more to come.
+              </p>
+            </div>
+          </div>
+          <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="	https://www.rentomojo.com/public/images/testimonials/navin-kumar.jpg"
+                alt=""
+              />
+              <h4>Navin Kumar</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                When I moved to Bangalore from Chennai, I went to multiple
+                websites to get a bed until I found out about Rentomojo. I
+                rented a bed and mattress, just to try it out. They delivered it
+                within a day and set it up at my place without any hassle. Now I
+                sleep so peacefully that I always end up being late for work :D
+              </p>
+            </div>
+          </div>
+          <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="	https://www.rentomojo.com/public/images/testimonials/anjali-sharma.jpg"
+                alt=""
+              />
+              <h4>Anjali Sharma</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                I got to know about RentoMojo through a friend and looked up for
+                AC on their website and finally rented one. The delivery guys
+                installed the AC in 2 days. And with a such a low deposit and
+                rent, I didn't have to spend a whole lot for my comfort. Thank
+                you RentoMojo, for being so easy breezy on my pocket.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="https://www.rentomojo.com/public/images/testimonials/shreyas-ravetkar.jpg"
+                alt=""
+              />
+              <h4>Shreyas Ravetkar</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                Rentomojo was unbelievably helpful. Never thought that setting
+                up a new place would be just few clicks away. The customer
+                support staff was on their toes to help me. Anytime I need
+                something for my house, Rentomojo has it. :)
+              </p>
+            </div>
+          </div>
+          <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="https://www.rentomojo.com/public/images/loader/no-preview.svg"
+                alt=""
+              />
+              <h4>Nikita Sharma</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                The thought of renting the furniture had never occurred to me.
+                When I saw Rentomojo's affordable range, I was super excited to
+                try and it was really amazing. From service to product quality,
+                everything was superb. I don’t have to carry the same furniture
+                to every house I move to and can change the look of my home
+                whenever I want 😬
+              </p>
+            </div>
+          </div>
+          <div class="commentCard">
+            <div class="rowOne">
+              <img
+                src="https://www.rentomojo.com/public/images/loader/no-preview.svg"
+                alt=""
+              />
+              <h4>Manish Srivastava</h4>
+            </div>
+            <div class="rowTwo">
+              <p>
+                I was suddenly asked to move to Chennai from Bengaluru in couple of days. Everything was garbled for me and huge tension of getting apartment, buying furnitures, selling while going back to Bangalore. Thanks to RentoMojo for excellent budgeted plans. With few mouse clicks and nominal security deposit u are done ☺. No tension for delivery, Rentomojo is a furniture wish wizard. Also takes care of relocation made my life easy. Happy to be a customer for Rentomojo. It made my house a happy home!
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="moj">
+        <h1>RentoMojo: Upgrade To Your Dream Lifestyle At An Unbelievably Low Price!</h1>
+        <p>RentoMojo is your ticket to a better lifestyle in India. We provide designer furniture, the newest gadgets, and bestselling appliances on rent in major Indian cities. You can use the best products available in the market at just a fraction of their retail value. You pay us a small monthly fee, which becomes lesser the longer you rent from us.
+    
+          Besides saving you money, we do our best to provide you with an exceptional, super-comfortable rental experience. Our ordering process is straightforward and efficient. You can order from us in a matter of minutes from your PC or smartphone. We offer speedy delivery in major Indian cities, namely Bangalore, Mumbai, Delhi, Chennai, Pune, Hyderabad, Gurgaon, and Noida.
+          
+          No matter what product you rent from us, we will provide you with several complementary benefits with it. The benefits range from a yearly product swap option to a periodic free maintenance service. These are benefits no regular retailer offers. Start renting now!</p>
+          <button>Read More >> </button>
+    
+          <div id="footer">
+            <div>
+              <h4>RENTOMOJO</h4>
+              <p>About Us</p>
+              <p>Culture</p>
+              <p>Investors</p>
+              <p>Careers</p>
+              <p>Contact</p>
+              <p>Our Benefits</p>
+              <p>Sitemap</p>
+            </div>
+            <div>
+              <h4>INFORMATION
+                </h4>
+                <p>Blog</p>
+                <p>FAQs</p>
+                <p>Documents Required</p>
+            </div>
+            <div>
+              <h4>POLICIES</h4>
+                <p>Shipping Policy</p>
+                <p>Cancellation & Return</p>
+                <p>Privacy Policy</p>
+                <p>Rental Terms & Conditions</p>
+                <p>Referral Terms & Conditions</p>
+            </div>
+            <div>
+              <h4>NEED HELP ?</h4>
+              <button>Chat With us (9AM - 6PM) </button>
+              <p>jo@rentomojo.com</p>
+              <h4>DOWNLOAD APP</h4>
+    
+              <div>
+                <a href="https://apps.apple.com/in/app/rentomojo-products-on-rent/id1404801676?_branch_match_id=1067694309670544985&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTNyu1MM8wL3bzigIAWVRPyxsAAAA%3D">
+                    <img src="https://www.carbmanager.com/_nuxt/img/189f2dc.png" alt="">
+                </a>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(565k+)</span>
+            </div>
+            <div>
+                <a href="https://play.google.com/store/apps/details?id=com.rentomojo&_branch_match_id=1067694309670544985&utm_source=automation&utm_campaign=App%20Download&utm_medium=Website&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8rNz8rXy8zTL3ILTfYKK052jAQA4IGbfRsAAAA%3D">
+                    <img src="https://www.carbmanager.com/_nuxt/img/5665828.png" alt="">
+                </a>
+            </div>
+            </div>
+          </div>
+          <hr>
+    
+          <div id="footer1">
+            <div>© 2022. Edunetwork Pvt. Ltd.</div>
+            <div>
+              <a target="_blank" href="https://www.facebook.com/rentomojo">
+                  <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/rentomojo/">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a target="_blank" href="https://twitter.com/rentomojo">
+                  <i class="fa-brands fa-pinterest"></i>
+              </a>
+              <a target="_blank" href="https://www.youtube.com/c/RentomojoOfficial">
+                  <i class="fa-brands fa-youtube"></i>
+              </a>
+          </div>
+            <div><a href="#top"><button>🔝</button></a></div>
+          </div>
+    </div>
+
+  </body>
 </html>
-
 <script type="module" src="./scripts/index.js"></script>
 <script type="module" src="./scripts/index_carzol.js"></script>
 <script type="module">
-  import nvbr from './components/nvbr.js';
+  import nvbr from "./components/nvbr.js";
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
-  import auth from './components/auth.js';
+  import auth from "./components/auth.js";
   auth();
-
-// import {data,imgdata1} from "./components/data.js"
-// console.log(data)
-// let searchItems=()=>{
-//   if(Search.value===data.title){
-//     console.log(data)
-//   }
-//  }
-//  let Search=document.getElementById("search");
-//   Search.addEventListener("input",searchItems);
 
 </script>
