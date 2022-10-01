@@ -9,19 +9,19 @@
   <link rel="stylesheet" href="./style/navbar.css" />
   <style>
     #container {
-      margin-top: 10px;
+      position: relative;
+      top: 95px;
       display: flex;
       flex-direction: column;
+      gap: 50px;
       background-color: #fff;
-      margin: 10% 0;
     }
 
     .mainRow {
-      width: 100%;
-      height: 100vh;
-      margin-top: 60px;
+      width: 100vw;
       display: flex;
       flex-direction: column;
+      border: 1px solid blue;
     }
 
     #carazol {
@@ -45,35 +45,36 @@
     }
 
     #next {
-      position: absolute;
-      top: 250px;
-      right: 55px;
+      position: relative;
+      left: 965px;
+      bottom: 200px;
     }
 
     #prev {
       position: absolute;
-      top: 250px;
+      top: 200px;
       left: 55px;
     }
 
     #category {
       margin: auto;
-      margin-top: 30px;
-      margin-bottom: 50px;
+      margin-top: -40px;
       width: 90%;
-      height: 100px;
       display: flex;
       flex-direction: row;
+      gap: 10px;
       align-items: center;
       justify-content: space-around;
+      /* border: 1px solid red; */
     }
 
     .category {
-      width: 130px;
-      height: 80px;
+      width: 120px;
+      height: 70px;
       border-radius: 10px;
       background-color: #fff;
       border: 0.1px solid gray;
+
     }
 
     .category:hover {
@@ -100,40 +101,49 @@
     }
 
     #Sndrow {
+      height: auto;
+      padding: 20px 0px 20px 0px;
       background-color: rgb(245, 247, 250);
     }
 
     #charSrow {
+      z-index: 5;
       display: flex;
       padding: 0px 50px;
       align-items: center;
       justify-content: space-between;
-      border: 1px solid red;
     }
 
     #Btn2 {
       width: 110px;
       height: 50px;
-      border: 1px solid sienna;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    #Btn2>button {
+    .Btn2>button {
       width: 50px;
       height: 50px;
       border-radius: 50%;
       color: black;
       border: 0.5px solid black;
+      opacity: 0.5;
+    }
+
+    .Btn2>button:hover {
+      opacity: 1;
     }
 
     #appedndCategory {
+      display: block;
+      overflow: hidden;
       display: flex;
-      gap: 50px;
-      overflow-x: scroll;
+      gap: 30px;
+      flex-direction: row;
+      justify-content: space-around;
       background-color: rgb(245, 247, 250);
-      border: 1px solid blueviolet;
+      /* border: 1px solid blueviolet; */
     }
 
     .card {
@@ -141,7 +151,9 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      border: 1px solid black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      /* height: auto; */
+      /* border: 1px solid black; */
     }
 
     .card>img {
@@ -179,10 +191,99 @@
       font-weight: 100;
     }
 
-    #Sline>h1>span {
-      font-size: 30px;
+    #Sline>h3 {
+      font-size: 25px;
+      font-weight: lighter;
+    }
+
+    #Sline>h3>span {
+      font-size: 25px;
       font-weight: lighter;
       color: gray;
+    }
+
+    #appedndCategory_A {
+      padding: 10px 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px 30px;
+      /* border: 1px solid red; */
+    }
+
+    .grid {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .grid>h3 {
+      font-weight: lighter;
+    }
+
+    .grid,
+    #comment>p {
+      margin-top: 10px;
+      color: gray;
+      font-weight: lighter;
+      line-height: 1.4;
+    }
+
+    #comment hr {
+      margin-top: 10px;
+      width: 55px;
+      border: none;
+      height: 2px;
+      background: orangered;
+    }
+
+    #Sline>hr {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 55px;
+      border: none;
+      height: 2px;
+      background: orangered;
+    }
+
+    .imgG>img {
+      width: 50px;
+      height: 50px;
+    }
+
+    #knowmore {
+      margin-top: 10px;
+      padding-left: 50px;
+    }
+
+    #knowmore>h3 {
+      font: size 14px;
+      font-weight: lighter;
+      color: lightseagreen;
+
+    }
+
+    #fourthRow {
+      margin: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    #comment {
+      margin: auto;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid red;
+    }
+
+    #slideComment {
+      width: 70%;
+      height: 300px;
+      border: 1px solid red;
     }
   </style>
 </head>
@@ -190,9 +291,6 @@
 <body>
   <div id="nav_container"></div>
   <div id="top"></div>
-
-
-
 
   <div id="showCity"></div>
   <div id="showSearchItem"></div>
@@ -213,7 +311,7 @@
         </div>
         <div class="category">
           <a href="">
-            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="">
+            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="bed">
             <h3>Furniture</h3>
           </a>
 
@@ -255,12 +353,13 @@
     <div class="mainRow" id="Sndrow">
       <div id="charSrow">
         <div id="Sline">
-          <h1>You'll love to <br><span>
-              take these home
-            </span></h1>
+          <h3>You'll love to <br>
+            <span>take these home</span>
+          </h3>
+          <hr>
         </div>
-        <hr>
-        <div id="Btn2">
+
+        <div class="Btn2" id="Btn2">
           <button id="nextdiv"> > </button>
           <button id="prewdiv"> < </button>
         </div>
@@ -268,80 +367,127 @@
       <div id="appedndCategory">
       </div>
     </div>
-    <div class="mainRow" id="3rdrow"></div>
-    <div class="mainRow" id="4throw"></div>
+    <div class="mainRow" id="thrdRow">
+      <div id="charSrow">
+        <div id="Sline">
+          <h3> There's more<br>
+            <span>to renting</span>
+          </h3>
+          <hr>
+        </div>
+      </div>
+      <div id="appedndCategory_A">
+        <div class="grid">
+          <div class="imgG">
+            <img src="https://hatil.com/sites/default/files/Bed.jpg" alt="bed">
+          </div>
+          <h3>Finest-quality products</h3>
+          <p>Quality matters to you, and us! That's why we do a strict quality-check for every product.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgG">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Location_icon_from_Noun_Project.png"
+              alt="location">
+          </div>
+          <h3>Free relocation</h3>
+          <p>Changing your house or even your city? We'll relocate your rented products for free.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgG">
+            <img
+              src="https://w7.pngwing.com/pngs/102/318/png-transparent-black-gear-logo-computer-icons-gear-maintenance-miscellaneous-maintenance-black-and-white.png"
+              alt="Maitinance">
+          </div>
+          <h3>Free maintenance</h3>
+          <p>Keeping your rented products in a spick and span condition is on us, so you can sit back and relax.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgG">
+            <img src="https://static.thenounproject.com/png/1385986-200.png" alt="cencle">
+          </div>
+          <h3>Cancel anytime</h3>
+          <p>Pay only for the time you use the product and close your subscription without any hassle.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgG">
+            <img src="https://cdn1.iconfinder.com/data/icons/e-commerce-223/48/11-512.png" alt="return">
+          </div>
+          <h3>Easy return on delivery</h3>
+          <p>If you don't like the product on delivery, you can return it right away—no questions asked.</p>
+        </div>
+
+        <div class="grid">
+          <div class="imgG">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-media-1-2/66/30-512.png" alt="Updating">
+          </div>
+          <h3>Keep upgrading</h3>
+          <p>Bored of the same product? Upgrade to try another, newer design and enjoy the change!</p>
+        </div>
+      </div>
+      <div id="knowmore">
+        <h3>Know more</h3>
+      </div>
+
+    </div>
+    <div class="mainRow" id="fourthRow">
+      <div id="comment">
+        <div id="Sline">
+          <h3> Over 1.5 lac <br>
+            <span>happy subscribers</span>
+          </h3>
+        </div>
+        <hr>
+        <p>Here's what they <br>
+          have to say <br>
+          about their <br>
+          RentoMojo <br>
+          experience.
+        </p>
+        <div class="Btn2">
+          <button> < </button>
+          <button> > </button>
+        </div>
+      </div>
+
+      <div id="slideComment"></div>
+    </div>
+
+
+
+
+
+
+    <div id="footer">
+      <a href="#top"><button>🔝</button></a>
+    </div>
   </div>
 
 
-
-
   
-  <a class="Top" href="#top"><button> 🔝 </button></a>
 </body>
 
 </html>
-<script src="./scripts/index.js"></script>
+<script type="module" src="./scripts/index.js"></script>
 <script type="module" src="./scripts/index_carzol.js"></script>
 <script type="module">
-
-
-
-
   import nvbr from './components/nvbr.js';
   let nav_container = document.querySelector("#nav_container");
   nav_container.innerHTML = nvbr();
   import auth from './components/auth.js';
   auth();
 
-
-  let imgdata1 = [
-    { url: "https://s.rmjo.in/Fitness-Offer-HP-Web-%20(1).jpg" },
-    { url: "https://s.rmjo.in/Paytm-Bank-Desktop-banner-%20(1).jpg" },
-    { url: "https://s.rmjo.in/AirOKWeb%20(1).png" },
-    { url: "https://s.rmjo.in/WP-Web.png" },
-  ];
-  let cont = document.getElementById("image");
-  cont.src = imgdata1[0].url;
-
-  let count = 1;
-  let id;
-  let func = (count) => {
-    id = setInterval(() => {
-      cont.src = imgdata1[count].url;
-      if (count === imgdata1.length - 1) {
-        count = 0;
-      } else {
-        count++;
-      }
-      console.log(count);
-    }, 3000);
-  };
-  func(count);
-
-  let nextimg = () => {
-    clearInterval(id);
-    cont.src = imgdata1[count].url;
-    // console.log(imgdata1.length);
-    // console.log(count);
-    if (count === imgdata1.length - 1) {
-      count = 0;
-    } else {
-      count++;
-    }
-    func(count);
-  };
-  let previmg = () => {
-    clearInterval(id);
-    cont.src = imgdata1[count].url;
-    if (count === 0) {
-      count = imgdata1.length - 1;
-    } else {
-      count--;
-    }
-    func(count);
-  };
-
-  document.getElementById("next").addEventListener("click", nextimg);
-  document.getElementById("prev").addEventListener("click", previmg);
+// import {data,imgdata1} from "./components/data.js"
+// console.log(data)
+// let searchItems=()=>{
+//   if(Search.value===data.title){
+//     console.log(data)
+//   }
+//  }
+//  let Search=document.getElementById("search");
+//   Search.addEventListener("input",searchItems);
 
 </script>
