@@ -108,6 +108,12 @@ import {data,imgdata1} from "../components/data.js"
   document.getElementById("nextdiv").addEventListener("click",nextdiv)
   document.getElementById("prewdiv").addEventListener("click",prewdiv)
 
+
+  function product (i,t,p){
+    this.image=i;
+    this.title=t;
+    this.price=p;
+  }
   function myfunc({imageUrl,title,Price}){
     window.location.href="product.html"
     let x=new product(imageUrl,title,Price);
