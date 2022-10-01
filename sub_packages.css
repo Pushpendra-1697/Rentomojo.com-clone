@@ -1,99 +1,176 @@
 *{
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #navbar{
-    width: 100%;
-    height: 50px;
-    
+  width: 100%;
+  height: 50px;
+  
 }
 
 #container{
-    width: 80%;
-    height: auto;
-    display: flex;
-    text-align: center;
-    gap: 20px;
-    margin: auto;
-    border: 2px solid red;
+  width: 80%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  margin: auto;
+ 
 }
 #sidebar1{
-    width: 30%;
-    height: auto;
-    border: 2px solid blue;
+  width: 30%;
+  height: auto;
+  
 }
 #sidebar2{
-    width: 70%;
-    height: 200px;
-    border: 2px solid blue;
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  margin: auto;
+
 }
 #containt{
-    width: 80%;
-    border: 2px solid black;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    text-align: center;
-    justify-content: center;
-    margin: auto;
+  width: 80%; 
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }
 #container1{
-    width: 80%;
-    border: 2px solid black;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    text-align: center; 
-    margin: auto;
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  text-align: center; 
+  margin: auto;
 }
 
 #inputbox{
-    width: 80%;
-    border: 2px solid black;
-    height: auto;
-    padding-top: 30px; 
-    margin: auto;
+  width: 80%;
+  border: 1px solid #1dbdc0;
+  background-color: #f3fbfc;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 3px;
+  height: auto;
+  padding-top: 30px; 
+  margin: auto;
+}
+#inputbox>h5{
+  color: #505050;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+#inputbox>p{
+  color: #707070;
+  font-size: 15px;
+  font-weight: 400;
 }
 
+
 #slide{
-    width: 80%;
-    height: 100px;
-    border: 1px solid #e6e6e6;
-    display: block;
-    text-align: center;
-    justify-content: center;
-    padding: 25px;
-    margin: auto;
+  width: 80%;
+  height: 100px;
+  border: 1px solid #e6e6e6;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  padding: 25px;
+  margin: auto;
 
 }
 #head>p{
-    color: #313131;
-    font-size: 16px;
-    margin-top:20px ;
-    margin-bottom: 16px;
-    margin-left: 35px;
-    font-weight: 400;
-    width: 80%;
-    display: flex;
-    text-align: left;
-    border: 1px solid rebeccapurple;
+  color: #313131;
+  font-size: 16px;
+  margin-top:20px ;
+  margin-bottom: 16px;
+  margin-left: 35px;
+  font-weight: 400;
+  width: 80%;
+  display: flex;
+  text-align: left;
+}
+
+#input{
+  width: 80%;
+  height: 50px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #1dbdc0;
+  
 }
 
 .first_div{
-    width: 70%;
-    text-align: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    margin: auto;
+  width: 70%;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding-top: 10px;
+  margin: auto;
 }
 .first_div>p{
-    color: #313131;
-    font-size: 12px;
-    margin-top: 5px;
+  color: #313131;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+
+#sidebar2>div{
+  text-align: center;
+  margin: auto;  
+}
+.main_div{
+  width: 100%; 
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+
+}
+.fis_div img{
+  width: 100%;
+}
+.sec_div {
+  width: 100%;
+}
+.sec_div >h3{
+  width: 100%;
+  color: #313131;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px;
+}
+.the_div>p{
+  color: #313131;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.btn{
+  width: 30%;
+  height: 35px;
+  color: #1dbdc0;
+  margin: 10px;
+
+}
+
+.the_div:hover{
+  box-shadow: 0 9px 7px 0 rgb(0 0 0 / 10%);
+  transition: box-shadow .2s linear;
+  border-bottom: 0;
 }
 
 
