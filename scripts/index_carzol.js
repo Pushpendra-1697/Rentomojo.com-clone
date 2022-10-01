@@ -62,10 +62,10 @@ import {data,imgdata1} from "../components/data.js"
       price.innerText=`₹ ${Price}/mo`;
       let seeMore=document.createElement("button");
       seeMore.setAttribute("id","seemoreBtn")
-      seeMore.innerText="See more"
+      seeMore.innerText="See more";
 
       divP.append(price,seeMore)
-      div.append(image,Title,rent,divP)
+      div.append(image,Title,rent,divP);
       container.append(div);
     });
   }

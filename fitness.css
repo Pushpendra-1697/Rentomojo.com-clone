@@ -48,3 +48,44 @@
    height: 70%;
    padding: auto;
 }
+
+
+
+#moj{
+    margin-top: 10%;
+    line-height: 30px;
+    padding: 26px;
+    background-color: rgb(245,247,250);
+  }
+  #moj button{
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #footer{
+    display: flex;
+    gap: 50px;
+    margin: auto;
+    width: 70%;
+  }
+  #footer > div{
+    width: 100%;
+  }
+  #footer img{
+    width: 100px;
+  }
+  #footer1{
+    display: flex;
+    gap: 5%;
+    margin: auto;
+    width: 50%;
+  }
+  #footer1 > div{
+    width: 100%;
+  }
+  hr{
+    margin: 4% 0;
+  }
+  #footer1 i{
+    margin:4% 6%;
+    font-size: 26px;
+  }
