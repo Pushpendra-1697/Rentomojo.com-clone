@@ -16,7 +16,7 @@ function myfunc(){
     let five=document.getElementById("five").checked;
     if(obj.name!=""&&obj.address!=""&&obj.number!=""){
         if(one==true||two==true||three==true||four==true||five==true){
-            window.location.href="review.html"
+            window.location.href="order.html"
             localStorage.setItem("shipment",JSON.stringify(obj))          
             return;
         }
