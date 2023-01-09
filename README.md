@@ -12,3 +12,5 @@ This is Group project. This is online rental app and we're here to offer you eas
 - HTML
 - CSS
 - Javascript
+- Advance CSS
+- Position Prop & Hover Effect
